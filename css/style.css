@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===============================
+   Global Styles
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===============================
+   Header
+================================ */
+
+header{
+    background:linear-gradient(135deg,#0d6efd,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header img{
+    width:90px;
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size:38px;
+    font-weight:700;
+}
+
+header p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* ===============================
+   Navigation
+================================ */
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    background:white;
+    padding:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav img.logo{
+    width:55px;
+    margin-right:15px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0d6efd;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#0d6efd;
+    color:white;
+}
+
+/* ===============================
+   Main
+================================ */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+/* ===============================
+   Welcome Section
+================================ */
+
+section{
+    margin-bottom:50px;
+}
+
+section h2{
+    color:#0d6efd;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+section p{
+    font-size:17px;
+    text-align:justify;
+}
+
+/* ===============================
+   Figure
+================================ */
+
+figure{
+    margin-top:30px;
+    text-align:center;
+}
+
+figure img{
+    width:100%;
+    max-width:900px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+figcaption{
+    margin-top:15px;
+    font-size:15px;
+    color:#666;
+    font-style:italic;
+}
+
+/* ===============================
+   Workshop
+================================ */
+
+article{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+article h2,
+article h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+article ul{
+    margin-top:15px;
+    margin-left:25px;
+}
+
+article li{
+    margin-bottom:10px;
+}
+
+/* ===============================
+   Button
+================================ */
+
+button{
+    margin-top:20px;
+    background:#198754;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+button:hover{
+    background:#157347;
+    transform:translateY(-3px);
+}
+
+/* ===============================
+   Cards Grid
+================================ */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.card-body h3{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+/* ===============================
+   Quick Links
+================================ */
+
+.quick-links ul{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    list-style:none;
+    margin-top:20px;
+}
+
+.quick-links a{
+    display:block;
+    text-decoration:none;
+    background:white;
+    color:#0d6efd;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    transition:.3s;
+    font-weight:600;
+}
+
+.quick-links a:hover{
+    background:#0d6efd;
+    color:white;
+}
+
+/* ===============================
+   Notice
+================================ */
+
+aside{
+    background:#fff3cd;
+    border-left:6px solid #ffc107;
+    padding:25px;
+    border-radius:12px;
+}
+
+aside h2,
+aside h3{
+    color:#856404;
+    margin-bottom:15px;
+}
+
+aside ul{
+    margin-left:20px;
+}
+
+aside li{
+    margin-bottom:10px;
+}
+
+/* ===============================
+   Dashboard Grid
+================================ */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.dashboard-card{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.dashboard-card h3{
+    color:#0d6efd;
+}
+
+.dashboard-card p{
+    font-size:32px;
+    font-weight:bold;
+    color:#198754;
+}
+
+/* ===============================
+   Events
+================================ */
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* ===============================
+   Forms
+================================ */
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#0d6efd;
+}
+
+/* ===============================
+   Footer
+================================ */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* ===============================
+   Horizontal Line
+================================ */
+
+hr{
+    margin:50px 0;
+    border:none;
+    height:2px;
+    background:#ddd;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media(max-width:992px){
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.dashboard-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.quick-links ul{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:30px;
+}
+
+section h2{
+    font-size:26px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.dashboard-grid{
+    grid-template-columns:1fr;
+}
+
+figure img{
+    width:100%;
+}
+
+button{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+header img{
+    width:70px;
+}
+
+header h1{
+    font-size:24px;
+}
+
+header p{
+    font-size:15px;
+}
+
+nav a{
+    display:block;
+    width:100%;
+    text-align:center;
+}
+
+main{
+    width:95%;
+}
+
+}
