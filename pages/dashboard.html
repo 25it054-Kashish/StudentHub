@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub - Student Personal Academic & Events Dashboard">
+    <title>Student Dashboard - StudentHub Portal</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>Student Portal Dashboard</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) &bull; CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Student Session Active</span>
+            <span id="date">📅 Date</span>
+            <span id="clock">⏰ Clock</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html" class="active">📊 Student Dashboard</a></li>
+            <li><a href="profile.html">👤 My Profile</a></li>
+            <li><a href="faq.html">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-danger btn-sm" style="color: #fff;">🚪 Logout</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">Student Dashboard</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+
+        <!-- Welcome Profile Snapshot Card -->
+        <section class="hero-section" style="padding: 24px 30px; margin-bottom: 28px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div style="display: flex; align-items: center; gap: 18px;">
+                    <img src="../images/avatar.svg" alt="Student Profile Avatar" style="width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--primary);">
+                    <div>
+                        <h2 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 2px;">Kashish Patel</h2>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                            <strong>Enrollment:</strong> 23CE001 &bull; <strong>Department:</strong> CSPIT-CE &bull; <strong>Semester:</strong> 3 (2nd Year)
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <a href="profile.html" class="btn btn-secondary btn-sm">Edit Profile</a>
+                    <a href="events.html" class="btn btn-primary btn-sm">+ Register Event</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Performance Metrics Grid (Practical 3 & 14) -->
+        <section class="metrics-grid" aria-label="Academic Performance Overview">
+            <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-info">
+                    <h4>Current CGPA</h4>
+                    <div class="metric-number">9.42</div>
+                    <span class="metric-trend">Top 5% in Department</span>
+                </div>
+            </div>
+            <div class="metric-card success">
+                <div class="metric-icon">✅</div>
+                <div class="metric-info">
+                    <h4>Lecture Attendance</h4>
+                    <div class="metric-number">88.5%</div>
+                    <span class="metric-trend">Above 80% Threshold</span>
+                </div>
+            </div>
+            <div class="metric-card warning">
+                <div class="metric-icon">🎫</div>
+                <div class="metric-info">
+                    <h4>Enrolled Events</h4>
+                    <div class="metric-number">3 Active</div>
+                    <span class="metric-trend">1 Workshop, 2 Hackathons</span>
+                </div>
+            </div>
+            <div class="metric-card danger">
+                <div class="metric-icon">📚</div>
+                <div class="metric-info">
+                    <h4>Pending CIE Labs</h4>
+                    <div class="metric-number">1 Due</div>
+                    <span style="font-size: 0.78rem; color: var(--danger); font-weight: 600;">Due Friday</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Column Content: Enrolled Events & Timetable / Progress -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;">
+            <!-- Left: Registered Events Table -->
+            <section style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                    <h3 style="font-size: 1.3rem; color: var(--primary);">🎯 My Registered Campus Activities</h3>
+                    <a href="events.html" class="btn btn-secondary btn-sm">Browse Catalog ›</a>
+                </div>
+
+                <div class="table-responsive" style="margin-top: 0;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event Title</th>
+                                <th>Category</th>
+                                <th>Scheduled Date</th>
+                                <th>Venue</th>
+                                <th>Status</th>
+                                <th>Pass</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Full-Stack Web Dev Bootcamp</strong></td>
+                                <td><span class="badge badge-primary">Workshop</span></td>
+                                <td>25 Oct 2026</td>
+                                <td>CSPIT Hall 1</td>
+                                <td><span class="badge badge-success">Confirmed</span></td>
+                                <td><button class="btn btn-secondary btn-sm" onclick="alert('Digital Entry Pass Generated for Kashish Patel (23CE001).')">🎟️ View</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Charusat Innovate 36-Hr Hackathon</strong></td>
+                                <td><span class="badge badge-warning">Hackathon</span></td>
+                                <td>28 Nov 2026</td>
+                                <td>Innovation Complex</td>
+                                <td><span class="badge badge-success">Team Verified</span></td>
+                                <td><button class="btn btn-secondary btn-sm" onclick="alert('Digital Entry Pass: Team CharusatDevs.')">🎟️ View</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capture The Flag (CTF) Quest</strong></td>
+                                <td><span class="badge badge-danger">Competition</span></td>
+                                <td>05 Dec 2026</td>
+                                <td>Lab 404</td>
+                                <td><span class="badge badge-primary">Waitlisted</span></td>
+                                <td><button class="btn btn-secondary btn-sm" disabled>Pending</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Academic Semester Subject Progress -->
+                <div style="margin-top: 32px;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 14px;">📖 Semester 3 Subject Progress</h3>
+                    
+                    <div style="margin-bottom: 14px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 4px;">
+                            <span><strong>ITUE203:</strong> Web Development Frameworks</span>
+                            <span style="font-weight: 700; color: var(--primary);">92%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--surface-alt); border-radius: 4px; overflow: hidden; border: 1px solid var(--border);">
+                            <div style="width: 92%; height: 100%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 4px;">
+                            <span><strong>CE204:</strong> Database Management Systems</span>
+                            <span style="font-weight: 700; color: var(--success);">85%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--surface-alt); border-radius: 4px; overflow: hidden; border: 1px solid var(--border);">
+                            <div style="width: 85%; height: 100%; background: var(--success);"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 4px;">
+                            <span><strong>CE205:</strong> Data Structures &amp; Algorithms</span>
+                            <span style="font-weight: 700; color: #d97706;">78%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--surface-alt); border-radius: 4px; overflow: hidden; border: 1px solid var(--border);">
+                            <div style="width: 78%; height: 100%; background: #f59e0b;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Quick Schedule & Quick Links -->
+            <aside style="display: flex; flex-direction: column; gap: 24px;">
+                <!-- Today's Schedule Card -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 14px;">📅 Today's Lecture Schedule</h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.88rem;">
+                        <li style="padding: 10px; background: var(--surface-alt); border-radius: var(--radius-sm); border-left: 3px solid var(--primary);">
+                            <div style="font-weight: 600;">09:10 - 10:10 AM</div>
+                            <div>Web Development Frameworks (Room 201)</div>
+                        </li>
+                        <li style="padding: 10px; background: var(--surface-alt); border-radius: var(--radius-sm); border-left: 3px solid var(--success);">
+                            <div style="font-weight: 600;">10:15 - 11:15 AM</div>
+                            <div>Database Management Systems (Lab 305)</div>
+                        </li>
+                        <li style="padding: 10px; background: var(--surface-alt); border-radius: var(--radius-sm); border-left: 3px solid #f59e0b);">
+                            <div style="font-weight: 600;">01:30 - 03:30 PM</div>
+                            <div>Web Dev Frameworks Lab (Practical 6)</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fast Resources Links -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 14px;">⚡ Quick Utilities</h3>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <a href="events.html" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">🎯 Browse Upcoming Events</a>
+                        <a href="profile.html" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">👤 Update Student Profile</a>
+                        <a href="faq.html" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">❓ Academic FAQs &amp; Help</a>
+                        <a href="feedback.html" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">💬 Submit Faculty Feedback</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 Charotar University of Science and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

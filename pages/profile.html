@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub - Student Academic Profile and Verification Records">
+    <title>My Profile - StudentHub Portal</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>Student Digital Profile</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) &bull; CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Verified Student</span>
+            <span id="date">📅 Date</span>
+            <span id="clock">⏰ Clock</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html">📊 Student Dashboard</a></li>
+            <li><a href="profile.html" class="active">👤 My Profile</a></li>
+            <li><a href="faq.html">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-danger btn-sm" style="color: #fff;">🚪 Logout</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">Student Profile</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px;" class="split-section">
+            <!-- Left: Profile Summary Card -->
+            <section style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); height: fit-content;">
+                <div style="position: relative; width: 130px; height: 130px; margin: 0 auto 16px;">
+                    <img src="../images/avatar.svg" alt="Kashish Patel" style="width: 100%; height: 100%; border-radius: 50%; border: 4px solid var(--primary); object-fit: cover;">
+                    <span style="position: absolute; bottom: 4px; right: 4px; background: var(--success); width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ffffff;" title="Online"></span>
+                </div>
+                <h2 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 4px;">Kashish Patel</h2>
+                <div style="font-family: var(--font-mono); font-weight: 600; color: var(--primary); font-size: 0.95rem; margin-bottom: 12px;">
+                    ID: 23CE001
+                </div>
+                <span class="badge badge-primary" style="margin-bottom: 20px;">B.Tech Computer Engineering</span>
+
+                <div style="border-top: 1px solid var(--border); padding-top: 18px; text-align: left; font-size: 0.88rem; display: flex; flex-direction: column; gap: 10px;">
+                    <div><strong>🏛️ Institute:</strong> CSPIT, CHARUSAT</div>
+                    <div><strong>📧 Email:</strong> 23ce001@charusat.edu.in</div>
+                    <div><strong>📞 Contact:</strong> +91 98765 43210</div>
+                    <div><strong>📅 Batch:</strong> 2025 - 2029</div>
+                    <div><strong>📈 Current CGPA:</strong> <span style="color: var(--success); font-weight: 700;">9.42 / 10.0</span></div>
+                </div>
+
+                <div style="margin-top: 24px;">
+                    <button class="btn btn-primary btn-block btn-sm" onclick="window.openModal('editProfileModal')">✏️ Edit Profile</button>
+                </div>
+            </section>
+
+            <!-- Right: Academic Credentials & Technical Portfolio -->
+            <section style="display: flex; flex-direction: column; gap: 24px;">
+                <!-- Academic Details -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 16px;">🎓 Academic Records &amp; Standing</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+                        <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm);">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Semester 1 SGPA</div>
+                            <div style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">9.25</div>
+                        </div>
+                        <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm);">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Semester 2 SGPA</div>
+                            <div style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">9.60</div>
+                        </div>
+                        <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm);">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Cumulative CGPA</div>
+                            <div style="font-size: 1.4rem; font-weight: 700; color: var(--success);">9.42</div>
+                        </div>
+                        <div style="background: var(--surface-alt); padding: 14px; border-radius: var(--radius-sm);">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Credits Earned</div>
+                            <div style="font-size: 1.4rem; font-weight: 700; color: var(--primary);">44 / 160</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills & Frameworks (Subject ITUE203) -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 16px;">💻 Technical Competencies</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">HTML5 Semantic Elements</span>
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">CSS3 Grid &amp; Flexbox</span>
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">JavaScript ES6+</span>
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">Fetch API &amp; AJAX</span>
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">PHP 8 OOP &amp; Sessions</span>
+                        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 6px 12px;">MySQL Prepared Statements</span>
+                        <span class="badge badge-success" style="font-size: 0.85rem; padding: 6px 12px;">Git &amp; GitHub</span>
+                        <span class="badge badge-warning" style="font-size: 0.85rem; padding: 6px 12px;">XAMPP Local Deployment</span>
+                    </div>
+                </div>
+
+                <!-- Verified Certificates -->
+                <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-sm);">
+                    <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 16px;">📜 Verified Certificates</h3>
+                    <div class="table-responsive" style="margin-top: 0;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Certificate Title</th>
+                                    <th>Issuing Organization</th>
+                                    <th>Issue Date</th>
+                                    <th>Credential</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Responsive Web Architecture</td>
+                                    <td>FTE CHARUSAT</td>
+                                    <td>August 2026</td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Downloading verified credential: CERT-2026-WEB-001')">⬇️ PDF</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Frontend UI Accessibility (WCAG)</td>
+                                    <td>CSPIT Tech Club</td>
+                                    <td>September 2026</td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Downloading verified credential: CERT-2026-A11Y-014')">⬇️ PDF</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Modal for Editing Profile -->
+    <div class="modal-backdrop" id="editProfileModal" role="dialog" aria-modal="true" aria-labelledby="editHeading">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="editHeading">Update Profile Details</h3>
+                <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+            </div>
+            <form onsubmit="handleProfileUpdate(event)">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="editMobile" class="form-label">Phone Number</label>
+                        <input type="tel" id="editMobile" class="form-control" value="9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editGithub" class="form-label">GitHub Profile URL</label>
+                        <input type="url" id="editGithub" class="form-control" value="https://github.com/kashish-charusat" placeholder="https://github.com/username">
+                    </div>
+                    <div class="form-group">
+                        <label for="editBio" class="form-label">Student Bio</label>
+                        <textarea id="editBio" class="form-control" rows="3">Aspiring Full-Stack Software Engineer &amp; Open-Source Enthusiast at FTE CHARUSAT.</textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 Charotar University of Science and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function handleProfileUpdate(e) {
+            e.preventDefault();
+            window.closeModal("editProfileModal");
+            if (window.showToast) {
+                window.showToast("Profile information updated successfully!", "success");
+            }
+        }
+    </script>
+</body>
+</html>

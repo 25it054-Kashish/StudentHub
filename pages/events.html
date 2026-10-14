@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Events, Hackathons and Technical Workshops - StudentHub FTE CHARUSAT">
+    <title>Campus Events &amp; Workshops - StudentHub</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>Campus Events &amp; Workshops</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) &bull; CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Fetch API Powered</span>
+            <span id="date">📅 Date</span>
+            <span id="clock">⏰ Clock</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html" class="active">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html">📊 Student Dashboard</a></li>
+            <li><a href="profile.html">👤 My Profile</a></li>
+            <li><a href="faq.html">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-secondary btn-sm" style="color: var(--primary);">🔐 Login</a></li>
+            <li><a href="register.html" class="btn btn-primary btn-sm" style="color: #fff;">📝 Register</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">Events Directory</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+
+        <section class="hero-section" style="padding: 24px 30px; margin-bottom: 24px;">
+            <h2 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 6px;">Technical Competitions &amp; Campus Bootcamps</h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Browse, search, and register for workshops, 36-hour hackathons, robotics challenges, and guest lectures. 
+                Data is dynamically fetched from our JSON catalog using JavaScript Fetch API with instant filtering.
+            </p>
+        </section>
+
+        <!-- Search & Filter Toolbar (Practical 6) -->
+        <div class="toolbar">
+            <div class="toolbar-search">
+                <input type="text" id="eventSearch" placeholder="Search events by title, speaker, or keywords..." aria-label="Search Events">
+            </div>
+
+            <div class="toolbar-filter">
+                <select id="eventCategory" aria-label="Filter by Category">
+                    <option value="All">All Categories</option>
+                    <option value="Workshop">Workshops</option>
+                    <option value="Hackathon">Hackathons</option>
+                    <option value="Competition">Competitions</option>
+                    <option value="Robotics">Robotics &amp; IoT</option>
+                    <option value="Seminar">Seminars &amp; Talks</option>
+                    <option value="Conference">Conferences</option>
+                </select>
+            </div>
+
+            <div class="toolbar-filter">
+                <select id="eventSort" aria-label="Sort Events">
+                    <option value="date-asc">Date: Upcoming First</option>
+                    <option value="date-desc">Date: Furthest First</option>
+                    <option value="name-asc">Title: A to Z</option>
+                    <option value="name-desc">Title: Z to A</option>
+                </select>
+            </div>
+
+            <div id="eventResultCount" style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted); margin-left: auto;">
+                Showing events...
+            </div>
+        </div>
+
+        <!-- Dynamic Cards Grid (Practical 6 Fetch API Target) -->
+        <section id="eventsContainer" class="cards-grid" aria-live="polite">
+            <!-- Populated asynchronously by js/render-data.js -->
+        </section>
+
+        <!-- Pagination Controls (Practical 6) -->
+        <nav aria-label="Event Pages">
+            <div class="pagination" id="eventsPagination"></div>
+        </nav>
+
+    </main>
+
+    <!-- Modal Popup for Event Registration (Practical 4) -->
+    <div class="modal-backdrop" id="eventRegisterModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="modalHeading">Event Registration Pass</h3>
+                <button type="button" class="modal-close-btn" data-close-modal aria-label="Close dialog">&times;</button>
+            </div>
+            <form id="eventRegistrationForm" onsubmit="handleEventPassSubmission(event)">
+                <div class="modal-body">
+                    <p style="font-size: 0.95rem; margin-bottom: 16px;">
+                        Confirming your seat reservation for: <br>
+                        <strong id="registerModalEventTitle" style="color: var(--primary); font-size: 1.1rem;">Workshop Title</strong>
+                    </p>
+                    <input type="hidden" id="registerModalEventId" name="event_id" value="">
+
+                    <div class="form-group">
+                        <label for="regStudentName" class="form-label">Full Name</label>
+                        <input type="text" id="regStudentName" class="form-control" value="Kashish Patel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEnrollment" class="form-label">Enrollment ID</label>
+                        <input type="text" id="regEnrollment" class="form-control" value="23CE001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail" class="form-label">Student Email</label>
+                        <input type="email" id="regEmail" class="form-control" value="23ce001@charusat.edu.in" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regRemarks" class="form-label">Team / Dietary / Laptop Remarks (Optional)</label>
+                        <input type="text" id="regRemarks" class="form-control" placeholder="e.g. Bringing personal laptop, Linux OS">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm Registration Pass</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 Charotar University of Science and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/render-data.js"></script>
+    <script>
+        function handleEventPassSubmission(e) {
+            e.preventDefault();
+            const title = document.getElementById("registerModalEventTitle").textContent;
+            window.closeModal("eventRegisterModal");
+            if (window.showToast) {
+                window.showToast(`Successfully registered for "${title}"!`, "success");
+            }
+        }
+    </script>
+</body>
+</html>

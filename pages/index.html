@@ -3,346 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>StudentHub - Home</title>
-
-    <!-- Google Font -->
+    <meta name="description" content="StudentHub - Centralized Digital Campus Portal for Charotar University of Science and Technology (CHARUSAT) FTE Students.">
+    <title>StudentHub - Digital Campus Portal | CHARUSAT FTE</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-    <!-- Header -->
+    <!-- Accessible Skip Link (Practical 2 Advanced) -->
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
 
-    <header>
+    <!-- Top Announcement Banner (Practical 4) -->
+    <div id="notification" role="region" aria-label="Campus Announcement">
+        <div class="notification-content">
+            <span class="notification-badge">ANNOUNCEMENT</span>
+            <p><strong>Charusat Innovate 36-Hr Hackathon:</strong> Registrations are now open with prize pools exceeding ₹1,00,000! Register your team before seats fill.</p>
+        </div>
+        <button id="closeNotification" aria-label="Dismiss Announcement">&times;</button>
+    </div>
 
-        <img src="images/StudentHubLogo.png" alt="StudentHub Logo">
-
-        <h1>StudentHub</h1>
-
-        <p>Your Digital Campus Portal</p>
-
+    <!-- Header & Live Status Bar (Practical 2 & 4) -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>StudentHub Portal</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) — CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Live System</span>
+            <span id="greeting">👋 Welcome, Engineer!</span>
+            <span id="date">📅 Loading Date...</span>
+            <span id="clock">⏰ 00:00:00 AM</span>
+        </div>
     </header>
 
-    <!-- Navigation -->
-
-    <nav>
-
-        <a href="index.html">Home</a>
-
-        <a href="about.html">About</a>
-
-        <a href="register.html">Register</a>
-
-        <a href="login.html">Login</a>
-
-        <a href="dashboard.html">Dashboard</a>
-
-        <a href="events.html">Events</a>
-
-        <a href="profile.html">Profile</a>
-
-        <a href="contact.html">Contact</a>
-
-        <a href="admin.html">Admin</a>
-
-        <a href="faq.html">FAQ</a>
-
-        <a href="feedback.html">Feedback</a>
-
+    <!-- Navigation Bar (Practical 2, 3, 4) -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html">📊 Student Dashboard</a></li>
+            <li><a href="profile.html">👤 My Profile</a></li>
+            <li><a href="faq.html">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-secondary btn-sm" style="color: var(--primary);">🔐 Login</a></li>
+            <li><a href="register.html" class="btn btn-primary btn-sm" style="color: #fff;">📝 Register</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
     </nav>
 
-    <!-- Main -->
+    <!-- Accessible Breadcrumb Navigation -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">Portal Overview</li>
+        </ol>
+    </nav>
 
-    <main>
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
 
-        <!-- Welcome -->
+        <!-- Welcome Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Empowering B.Tech Innovators at CHARUSAT</h2>
+                <p class="hero-lead">
+                    Welcome to <strong>StudentHub</strong>, the unified digital campus ecosystem engineered for the 
+                    students and faculty of the <strong>Faculty of Technology &amp; Engineering (FTE)</strong> at 
+                    <strong>Charotar University of Science and Technology</strong>. Seamlessly manage registrations, 
+                    track upcoming hackathons, participate in coding bootcamps, and stay updated with real-time academic announcements.
+                </p>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                    <a href="events.html" class="btn btn-primary">🚀 Explore Events</a>
+                    <a href="register.html" class="btn btn-secondary">📝 New Student Onboarding</a>
+                    <a href="dashboard.html" class="btn btn-secondary">📊 Student Portal</a>
+                </div>
+            </div>
 
-        <section>
-
-            <h2>Welcome to StudentHub</h2>
-
-            <p>
-
-                StudentHub is a modern digital campus portal developed for
-                <strong>CHARUSAT University</strong>. It provides students
-                with one platform to manage academic information,
-                register for workshops, participate in campus events,
-                receive announcements, access study resources,
-                and stay connected with university activities.
-
-            </p>
-
-            <figure>
-
-                <img src="images/campus.png" alt="CHARUSAT Campus">
-
-                <figcaption>
-
-                    <strong>Figure 1:</strong> CHARUSAT University Campus –
-                    StudentHub connects students with academics,
-                    workshops, events, notices and campus services through
-                    one responsive digital platform.
-
-                </figcaption>
-
+            <!-- Campus Image & Thought Card (Requested by User) -->
+            <figure class="campus-showcase">
+                <div class="campus-image-wrapper">
+                    <img src="../images/campus.png" alt="CHARUSAT University Campus Panoramic View, Changa">
+                    <div class="campus-overlay-badge">
+                        <span>🏛️ CHARUSAT University Campus — Changa, Gujarat</span>
+                    </div>
+                </div>
+                <div class="thought-card">
+                    <div class="thought-icon">💡</div>
+                    <div class="thought-body">
+                        <blockquote>
+                            "Education is not the learning of facts, but the training of the mind to think."
+                        </blockquote>
+                        <p class="thought-sub">
+                            At CHARUSAT, every challenge is an opportunity to invent, every laboratory is a launchpad for discovery, 
+                            and every student is an architect of tomorrow's technological landscape.
+                        </p>
+                        <cite>— Albert Einstein &bull; Dedicated to B.Tech Engineers</cite>
+                    </div>
+                </div>
             </figure>
-
         </section>
 
-        <hr>
-
-        <!-- Workshop -->
-
-        <article>
-
-            <h2>🚀 Upcoming Web Development Workshop</h2>
-
-            <p>
-
-                Learn HTML5, CSS3, JavaScript, Bootstrap,
-                Flexbox, CSS Grid and Responsive Web Design.
-
-                This workshop is designed for beginners and
-                helps students build professional websites.
-
-            </p>
-
-            <ul>
-
-                <li><strong>Date:</strong> 25 July 2026</li>
-
-                <li><strong>Time:</strong> 10:00 AM - 1:00 PM</li>
-
-                <li><strong>Venue:</strong> CSPIT Seminar Hall</li>
-
-                <li><strong>Certificate:</strong> E-Certificate Provided</li>
-
-            </ul>
-
-            <button>Register Now</button>
-
-        </article>
-
-        <hr>
-
-        <!-- Featured Events -->
-
-        <section>
-
-            <h2>🎯 Featured Events</h2>
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <img src="images/event1.jpg" alt="Coding Challenge">
-
-                    <div class="card-body">
-
-                        <h3>Coding Challenge</h3>
-
-                        <p>
-                            Test your programming skills and compete with
-                            talented developers.
-                        </p>
-
-                    </div>
-
+        <!-- Dynamic Quick Stats Grid (Practical 3 & 14) -->
+        <section class="metrics-grid" aria-label="Campus Statistics">
+            <div class="metric-card">
+                <div class="metric-icon">🎓</div>
+                <div class="metric-info">
+                    <h4>Enrolled Engineers</h4>
+                    <div class="metric-number">4,850+</div>
+                    <span class="metric-trend">Across CSPIT &amp; DEPSTAR</span>
                 </div>
-
-                <div class="card">
-
-                    <img src="images/event2.jpg" alt="Hackathon">
-
-                    <div class="card-body">
-
-                        <h3>Hackathon 2026</h3>
-
-                        <p>
-                            Collaborate with teams and build innovative
-                            software solutions.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="card">
-
-                    <img src="images/event3.jpg" alt="AI Workshop">
-
-                    <div class="card-body">
-
-                        <h3>AI & ML Bootcamp</h3>
-
-                        <p>
-                            Learn Artificial Intelligence,
-                            Machine Learning and Data Analytics.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
             </div>
-
-        </section>
-
-        <hr>
-
-        <!-- Notices -->
-
-        <aside>
-
-            <h2>📢 Latest Notices</h2>
-
-            <ul>
-
-                <li>Lab Practical Submission on Friday.</li>
-
-                <li>Workshop Registration is now Open.</li>
-
-                <li>Hackathon Registration starts next week.</li>
-
-                <li>Semester Project Guidelines uploaded.</li>
-
-                <li>Library Membership Renewal is Open.</li>
-
-            </ul>
-
-        </aside>
-
-        <hr>
-
-        <!-- Quick Links -->
-
-        <section class="quick-links">
-
-            <h2>🔗 Quick Links</h2>
-
-            <ul>
-
-                <li><a href="#">📚 Library Portal</a></li>
-
-                <li><a href="#">🖥 ERP Login</a></li>
-
-                <li><a href="#">📝 Evaluation Portal</a></li>
-
-                <li><a href="#">📅 Academic Calendar</a></li>
-
-                <li><a href="#">📄 Exam Timetable</a></li>
-
-                <li><a href="#">💳 Fee Payment</a></li>
-
-                <li><a href="#">🎓 Scholarship Portal</a></li>
-
-                <li><a href="#">💼 Placement Cell</a></li>
-
-            </ul>
-
-        </section>
-
-        <hr>
-
-        <!-- Student Services -->
-
-        <section>
-
-            <h2>🎓 Student Services</h2>
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3>Student Registration</h3>
-
-                        <p>
-                            Register quickly for university events,
-                            workshops and activities.
-                        </p>
-
-                    </div>
-
+            <div class="metric-card success">
+                <div class="metric-icon">🚀</div>
+                <div class="metric-info">
+                    <h4>Active Events &amp; Labs</h4>
+                    <div class="metric-number">16 Active</div>
+                    <span class="metric-trend">Bootcamps &amp; Hackathons</span>
                 </div>
-
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3>Digital Profile</h3>
-
-                        <p>
-
-                            Manage your profile,
-                            achievements,
-                            certificates
-                            and academic records.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3>Campus Updates</h3>
-
-                        <p>
-
-                            Stay updated with
-                            announcements,
-                            examinations,
-                            workshops,
-                            placements and notices.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
             </div>
-
+            <div class="metric-card warning">
+                <div class="metric-icon">🏆</div>
+                <div class="metric-info">
+                    <h4>Placement Record</h4>
+                    <div class="metric-number">94.8%</div>
+                    <span class="metric-trend">Top Recruiter Offers</span>
+                </div>
+            </div>
+            <div class="metric-card danger">
+                <div class="metric-icon">🔬</div>
+                <div class="metric-info">
+                    <h4>R&amp;D Patents &amp; Papers</h4>
+                    <div class="metric-number">320+</div>
+                    <span class="metric-trend">Published Innovations</span>
+                </div>
+            </div>
         </section>
+
+        <!-- Featured Events Slider / Carousel (Practical 4) -->
+        <section class="carousel-container" aria-label="Featured Technical Events">
+            <div class="carousel-header">
+                <h3><span>🔥</span> Flagship Campus Highlights</h3>
+                <a href="events.html" class="btn btn-secondary btn-sm">View All 16 Events ›</a>
+            </div>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-image">
+                            <img src="../images/event-hackathon.svg" alt="Charusat Innovate 36-Hour Hackathon">
+                        </div>
+                        <div class="carousel-slide-content">
+                            <span class="tag">FLAGSHIP HACKATHON</span>
+                            <h4>Charusat Innovate 2026 (36-Hour Sprint)</h4>
+                            <p>Collaborate with multidisciplinary engineering squads to engineer groundbreaking solutions in Agritech, Healthcare and AI. Over ₹1,00,000 in prizes!</p>
+                            <div style="margin-bottom: 16px; font-size: 0.88rem; color: var(--text-muted);">
+                                📅 28-30 Nov 2026 &bull; 🏛️ Central Innovation Complex
+                            </div>
+                            <a href="events.html" class="btn btn-primary btn-sm">Register Team</a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-image">
+                            <img src="../images/event-web.svg" alt="Web Dev & Cloud Bootcamp">
+                        </div>
+                        <div class="carousel-slide-content">
+                            <span class="tag">TECHNICAL WORKSHOP</span>
+                            <h4>Full-Stack Web Dev &amp; Cloud Bootcamp</h4>
+                            <p>Master modern frontend frameworks, PHP 8 backend APIs, MySQL databases, and cloud deployment pipelines with hands-on lab sessions.</p>
+                            <div style="margin-bottom: 16px; font-size: 0.88rem; color: var(--text-muted);">
+                                📅 25 Oct 2026 &bull; 🏛️ CSPIT Seminar Hall 1
+                            </div>
+                            <a href="events.html" class="btn btn-primary btn-sm">Join Bootcamp</a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-image">
+                            <img src="../images/event-ai.svg" alt="AI & Deep Learning Summit">
+                        </div>
+                        <div class="carousel-slide-content">
+                            <span class="tag">AI &amp; ML SUMMIT</span>
+                            <h4>Generative AI &amp; LLM Engineering Summit</h4>
+                            <p>Hands-on exploration of transformer architectures, prompt orchestration, computer vision pipelines, and deploying edge AI models.</p>
+                            <div style="margin-bottom: 16px; font-size: 0.88rem; color: var(--text-muted);">
+                                📅 12 Nov 2026 &bull; 🏛️ FTE Central Auditorium
+                            </div>
+                            <a href="events.html" class="btn btn-primary btn-sm">Reserve Seat</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="carouselPrev" aria-label="Previous Slide">‹</button>
+                    <button class="carousel-btn" id="carouselNext" aria-label="Next Slide">›</button>
+                </div>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </section>
+
+        <!-- Two Column Layout: Latest Notices & Quick Academic Services -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 40px;" class="split-section">
+            <!-- Left: Featured Cards -->
+            <section>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 style="font-size: 1.4rem; color: var(--primary);">🎯 Key Student Portals</h3>
+                    <a href="dashboard.html" class="btn btn-secondary btn-sm">My Dashboard ›</a>
+                </div>
+                <div class="cards-grid" style="margin-top: 0;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📋</div>
+                            <h3>Semester Academic Portal</h3>
+                            <p>Track your continuous internal evaluations (CIE), lab practical rubrics, timetable, and attendance reports.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-primary">Academics</span>
+                                <a href="dashboard.html" class="btn btn-secondary btn-sm">Access Portal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🏆</div>
+                            <h3>Hackathons &amp; Events</h3>
+                            <p>Discover coding leagues, robotics expos, and technical paper presentations with instant digital pass issuance.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-success">Competitions</span>
+                                <a href="events.html" class="btn btn-primary btn-sm">Browse All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📚</div>
+                            <h3>Digital Knowledge Hub</h3>
+                            <p>Access IEEE Xplore, ScienceDirect journals, lecture course notes, previous year exam question banks, and lab manuals.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-warning">Library</span>
+                                <a href="faq.html" class="btn btn-secondary btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">💼</div>
+                            <h3>Career &amp; Placement Cell</h3>
+                            <p>Connect with tier-1 technology firms, internship drives, resume workshops, and mock technical interview rounds.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-primary">Placements</span>
+                                <a href="about.html" class="btn btn-secondary btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Aside Notices (Practical 2 Semantic HTML) -->
+            <aside style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm);" aria-label="Official Notices">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 2px solid var(--warning); padding-bottom: 8px;">
+                    <h3 style="font-size: 1.2rem; color: #b45309; display: flex; align-items: center; gap: 8px;">
+                        <span>📢</span> Urgent Notices
+                    </h3>
+                    <span class="badge badge-warning">Live Feed</span>
+                </div>
+                <ul id="noticesContainer" style="list-style: none;">
+                    <!-- Dynamically populated from notices.json -->
+                    <li style="margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
+                        <span class="badge badge-danger">Academic</span>
+                        <h5 style="margin-top: 4px;">Web Development Practical Submissions</h5>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Submit ITUE203 practical file and repository by this Friday.</p>
+                    </li>
+                    <li style="margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;">
+                        <span class="badge badge-primary">Events</span>
+                        <h5 style="margin-top: 4px;">Charusat Innovate Hackathon 2026</h5>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Team registrations are now officially live on StudentHub.</p>
+                    </li>
+                </ul>
+                <div style="margin-top: 16px;">
+                    <a href="faq.html" class="btn btn-secondary btn-sm btn-block">Read Help &amp; FAQs</a>
+                </div>
+            </aside>
+        </div>
 
     </main>
 
-    <!-- Footer -->
-
-    <footer>
-
-        <p>
-
-            <strong>StudentHub - Your Digital Campus Portal</strong>
-
-        </p>
-
-        <p>
-
-            CHARUSAT University
-
-        </p>
-
-        <p>
-
-            Built using HTML5, CSS3, Flexbox, CSS Grid and Responsive Design
-
-        </p>
-
-        <p>
-
-            © 2026 StudentHub. All Rights Reserved.
-
-        </p>
-
+    <!-- Footer (Practical 2) -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>🎓 StudentHub Portal</h4>
+                <p>
+                    Centralized digital campus platform developed for the Faculty of Technology &amp; Engineering (FTE) 
+                    at Charotar University of Science and Technology (CHARUSAT), Changa, Gujarat.
+                </p>
+                <div style="font-size: 0.85rem; color: #94a3b8;">
+                    <strong>Subject:</strong> Web Development Frameworks (ITUE203) &bull; Semester 3
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About FTE</a></li>
+                    <li><a href="events.html">Events &amp; Workshops</a></li>
+                    <li><a href="dashboard.html">Student Dashboard</a></li>
+                    <li><a href="profile.html">Student Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Support &amp; Feedback</h5>
+                <ul>
+                    <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    <li><a href="contact.html">Campus Directory</a></li>
+                    <li><a href="feedback.html">Submit Feedback</a></li>
+                    <li><a href="submissions.html">Submissions Viewer (CSV)</a></li>
+                    <li><a href="admin.html">Admin Moderation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Institutes</h5>
+                <ul>
+                    <li>CSPIT (Computer, IT, AIML, EC)</li>
+                    <li>DEPSTAR (CSE, IT, CE)</li>
+                    <li>Central Library &amp; Labs</li>
+                    <li>Innovation &amp; Incubation Cell</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Charotar University of Science and Technology (CHARUSAT). All Rights Reserved.</p>
+            <p style="margin-top: 4px; opacity: 0.7;">Developed with Semantic HTML5, CSS3 Grid/Flexbox, JavaScript ES6+, PHP 8 &amp; MySQL.</p>
+        </div>
     </footer>
 
+    <!-- Core Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/render-data.js"></script>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions - StudentHub FTE CHARUSAT">
+    <title>Frequently Asked Questions - StudentHub</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>Frequently Asked Questions</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) &bull; CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Knowledge Base</span>
+            <span id="date">📅 Date</span>
+            <span id="clock">⏰ Clock</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html">📊 Student Dashboard</a></li>
+            <li><a href="profile.html">👤 My Profile</a></li>
+            <li><a href="faq.html" class="active">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-secondary btn-sm" style="color: var(--primary);">🔐 Login</a></li>
+            <li><a href="register.html" class="btn btn-primary btn-sm" style="color: #fff;">📝 Register</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">FAQ &amp; Knowledge Base</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+
+        <section class="hero-section" style="padding: 24px 30px; margin-bottom: 24px;">
+            <h2 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 6px;">Student Questions &amp; Academic Help</h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Find verified answers regarding semester attendance, CIE marks evaluation, event passes, 
+                library book renewals, and placement criteria. Powered by dynamic Fetch API and collapsible accordion components.
+            </p>
+        </section>
+
+        <!-- Search & Filter Controls -->
+        <div class="toolbar">
+            <div class="toolbar-search">
+                <input type="text" id="faqSearch" placeholder="Type a keyword to search questions (e.g. attendance, hackathon, password)..." aria-label="Search FAQs">
+            </div>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn active" data-category="All">All Categories</button>
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn" data-category="Academics">Academics</button>
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn" data-category="Events">Events</button>
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn" data-category="Accounts">Accounts</button>
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn" data-category="Library">Library</button>
+                <button type="button" class="btn btn-secondary btn-sm faq-cat-btn" data-category="General">General</button>
+            </div>
+        </div>
+
+        <!-- Collapsible Accordion Container (Practical 4 & 6) -->
+        <section id="faqAccordion" class="accordion" aria-label="FAQ Accordion List">
+            <!-- Populated dynamically via js/render-data.js from data/faqs.json -->
+        </section>
+
+        <div style="margin-top: 40px; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 30px;">
+            <h3>Still have questions?</h3>
+            <p style="color: var(--text-secondary); margin: 8px 0 16px;">Our academic mentors and student coordinators are here to assist you.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Academic Desk</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 Charotar University of Science and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/render-data.js"></script>
+</body>
+</html>

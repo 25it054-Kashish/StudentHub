@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Semester 3 Lab Practical Submission Schedule",
+    "category": "Academic",
+    "date": "2026-10-18",
+    "department": "FTE All Departments",
+    "content": "All 3rd Semester B.Tech students must complete their Web Development Frameworks (ITUE203) practical journals and repository submissions by this Friday.",
+    "urgent": true
+  },
+  {
+    "id": 2,
+    "title": "Registration Open for Charusat Innovate 36-Hr Hackathon",
+    "category": "Events",
+    "date": "2026-10-20",
+    "department": "Innovation Club",
+    "content": "Registrations are now officially live on StudentHub. Cash prizes worth over ₹1,00,000 to be won. Form your 4-member teams today!",
+    "urgent": false
+  },
+  {
+    "id": 3,
+    "title": "Library Book Bank Scheme Renewal Notice",
+    "category": "Library",
+    "date": "2026-10-22",
+    "department": "Central Library",
+    "content": "Students eligible for Book Bank renewal are requested to visit the Central Library circulation desk between 10 AM and 4 PM with valid ID cards.",
+    "urgent": false
+  },
+  {
+    "id": 4,
+    "title": "Mid-Semester Examination Timetable Announced",
+    "category": "Examination",
+    "date": "2026-10-24",
+    "department": "Exam Cell",
+    "content": "The tentative schedule for Mid-Semester Examination has been uploaded on the University portal. Check your subject dates.",
+    "urgent": true
+  },
+  {
+    "id": 5,
+    "title": "Guest Lecture on Generative AI & Industry Frontiers",
+    "category": "Seminars",
+    "date": "2026-10-28",
+    "department": "CSPIT-CE & AIML",
+    "content": "Join us for an enlightening keynote by industry pioneers from Google and Microsoft on Large Language Models and prompt systems.",
+    "urgent": false
+  },
+  {
+    "id": 6,
+    "title": "National Scholarship Portal (NSP) Verification Deadline",
+    "category": "Scholarship",
+    "date": "2026-10-30",
+    "department": "Student Welfare",
+    "content": "All students who applied for Post-Matric / NSP scholarships must submit physical document photocopies to the Student Section.",
+    "urgent": true
+  }
+]

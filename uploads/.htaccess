@@ -1,0 +1,7 @@
+# StudentHub Secure Uploads Protection
+# Prevent execution of PHP scripts in uploads directory
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|phps|cgi|pl|exe)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+Options -Indexes -ExecCGI

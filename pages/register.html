@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub - Student Registration Portal with Real-Time Validation and Security Measures">
+    <title>Student Registration - StudentHub Portal</title>
+    <link rel="icon" type="image/png" href="../images/favStudentIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-top">
+            <img src="../images/StudentHubLogo.png" alt="StudentHub Official Portal Logo" class="header-logo">
+            <div class="header-brand">
+                <h1>Student Registration Portal</h1>
+                <p class="tagline">Faculty of Technology and Engineering (FTE) &bull; CHARUSAT</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <span class="live-badge">Admissions 2026-27</span>
+            <span id="date">📅 Date</span>
+            <span id="clock">⏰ Clock</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-brand">
+            <img src="../images/favStudentIcon.png" alt="StudentHub Icon">
+            <span>StudentHub</span>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">🏛️ About FTE</a></li>
+            <li><a href="events.html">🎯 Events &amp; Workshops</a></li>
+            <li><a href="dashboard.html">📊 Student Dashboard</a></li>
+            <li><a href="profile.html">👤 My Profile</a></li>
+            <li><a href="faq.html">❓ FAQ</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="feedback.html">💬 Feedback</a></li>
+            <li><a href="admin.html">⚙️ Admin</a></li>
+            <li><a href="login.html" class="btn btn-secondary btn-sm" style="color: var(--primary);">🔐 Login</a></li>
+            <li><a href="register.html" class="btn btn-primary btn-sm active" style="color: #fff;">📝 Register</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn" class="theme-toggle-btn" aria-label="Toggle theme">🌙 Dark Theme</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-container" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active" aria-current="page">Student Registration</li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+
+        <div class="form-card">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 6px;">Create Your Student Account</h2>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    Join the StudentHub ecosystem to register for technical bootcamps, track CIE grades, and access university resources.
+                </p>
+            </div>
+
+            <!-- Registration Form (Practicals 2, 5, 7, 9) -->
+            <form id="registrationForm" action="../php/process_register.php" method="POST" novalidate>
+                <!-- CSRF Token (Practical 7 & 9 Advanced) -->
+                <input type="hidden" name="csrf_token" value="demo_csrf_token_studenthub_2026">
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Kashish Patel" required autocomplete="name">
+                    <div class="invalid-feedback">Please enter your full name (letters only, min 3 characters).</div>
+                    <div class="form-help">Enter your name as registered in university admission records.</div>
+                </div>
+
+                <!-- Email & Mobile -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Student Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="e.g. 23ce001@charusat.edu.in" required autocomplete="email">
+                        <div class="invalid-feedback">Please provide a valid university email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="e.g. 9876543210" maxlength="10" required autocomplete="tel">
+                        <div class="invalid-feedback">Must be a valid 10-digit mobile number.</div>
+                    </div>
+                </div>
+
+                <!-- Academic Program & Institute -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label for="course" class="form-label">Academic Program <span class="required">*</span></label>
+                        <select id="course" name="course" class="form-control" required>
+                            <option value="">-- Select Program --</option>
+                            <option value="B.Tech Computer Engineering">B.Tech Computer Engineering (CE)</option>
+                            <option value="B.Tech Information Technology">B.Tech Information Technology (IT)</option>
+                            <option value="B.Tech Artificial Intelligence & ML">B.Tech AI &amp; ML (AIML)</option>
+                            <option value="B.Tech Computer Science & Engg">B.Tech Computer Science (CSE)</option>
+                            <option value="B.Tech Electronics & Comm">B.Tech Electronics &amp; Comm (EC)</option>
+                            <option value="B.Tech Mechanical Engineering">B.Tech Mechanical Engineering (ME)</option>
+                            <option value="B.Tech Civil Engineering">B.Tech Civil Engineering (CL)</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your academic program.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="department" class="form-label">Institute / Department <span class="required">*</span></label>
+                        <select id="department" name="department" class="form-control" required>
+                            <option value="">-- Select Institute --</option>
+                            <option value="CSPIT">CSPIT (Chandubhai S Patel Inst of Tech)</option>
+                            <option value="DEPSTAR">DEPSTAR (Devang Patel Inst of Adv Tech)</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your institute.</div>
+                    </div>
+                </div>
+
+                <!-- Year and Semester -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label for="year" class="form-label">Current Academic Year <span class="required">*</span></label>
+                        <select id="year" name="year" class="form-control" required>
+                            <option value="">-- Select Year --</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                            <option value="4th Year">4th Year</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your current study year.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="semester" class="form-label">Current Semester <span class="required">*</span></label>
+                        <select id="semester" name="semester" class="form-control" required>
+                            <option value="">-- Select Semester --</option>
+                            <option value="1">Semester 1</option>
+                            <option value="2">Semester 2</option>
+                            <option value="3" selected>Semester 3 (Current 2026-27)</option>
+                            <option value="4">Semester 4</option>
+                            <option value="5">Semester 5</option>
+                            <option value="6">Semester 6</option>
+                            <option value="7">Semester 7</option>
+                            <option value="8">Semester 8</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your current semester.</div>
+                    </div>
+                </div>
+
+                <!-- Gender Radio Group (Practical 5) -->
+                <div class="form-group">
+                    <label class="form-label">Gender <span class="required">*</span></label>
+                    <div style="display: flex; gap: 20px; align-items: center; margin-top: 6px;">
+                        <label class="form-check" style="margin-bottom: 0;">
+                            <input type="radio" name="gender" value="Male" required>
+                            <span class="form-check-label">Male</span>
+                        </label>
+                        <label class="form-check" style="margin-bottom: 0;">
+                            <input type="radio" name="gender" value="Female">
+                            <span class="form-check-label">Female</span>
+                        </label>
+                        <label class="form-check" style="margin-bottom: 0;">
+                            <input type="radio" name="gender" value="Other">
+                            <span class="form-check-label">Other</span>
+                        </label>
+                    </div>
+                    <div id="genderFeedback" class="invalid-feedback">Please select your gender.</div>
+                </div>
+
+                <!-- Password with Strength Meter (Practical 5) -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Create a strong password" required autocomplete="new-password">
+                    <div class="invalid-feedback">Password must have 8+ chars with uppercase, lowercase, number &amp; symbol.</div>
+                    
+                    <!-- Password Strength Meter Bar -->
+                    <div class="password-meter">
+                        <div class="strength-bar-bg">
+                            <div id="strengthBar" class="strength-bar"></div>
+                        </div>
+                        <span id="strengthText" class="strength-text">Password strength indicator</span>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password <span class="required">*</span></label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Re-enter your password" required autocomplete="new-password">
+                    <div class="invalid-feedback">Passwords do not match.</div>
+                </div>
+
+                <!-- Canvas CAPTCHA (Practical 5 Advanced) -->
+                <div class="form-group">
+                    <label for="captchaInput" class="form-label">Human Security Verification (CAPTCHA) <span class="required">*</span></label>
+                    <div class="captcha-box">
+                        <canvas id="captchaCanvas" width="160" height="42" aria-label="Security CAPTCHA verification code"></canvas>
+                        <button type="button" id="refreshCaptchaBtn" class="captcha-refresh-btn" title="Refresh CAPTCHA code">🔄</button>
+                    </div>
+                    <input type="text" id="captchaInput" name="captchaInput" class="form-control" placeholder="Enter characters displayed in image above" required autocomplete="off">
+                    <div class="invalid-feedback">Incorrect CAPTCHA characters. Please try again.</div>
+                </div>
+
+                <!-- Terms and Conditions Checkbox -->
+                <div class="form-group">
+                    <label class="form-check">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="form-check-label">
+                            I accept the <a href="about.html" target="_blank">Student Code of Conduct</a> and agree to the 
+                            responsible computing guidelines of CHARUSAT FTE.
+                        </span>
+                    </label>
+                    <div id="termsFeedback" class="invalid-feedback">You must accept the terms to proceed.</div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div style="display: flex; gap: 14px; margin-top: 24px;">
+                    <button type="submit" class="btn btn-primary" style="flex: 2;">🚀 Register Student Account</button>
+                    <button type="reset" class="btn btn-secondary" style="flex: 1;">Clear</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary);">
+                    Already registered on StudentHub? <a href="login.html" style="font-weight: 600;">Sign In Here ›</a>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 Charotar University of Science and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "category": "Academics",
+    "question": "What is the minimum attendance required to appear in university examinations?",
+    "answer": "As per CHARUSAT academic regulations, students must maintain a minimum of 80% attendance in lectures and practical sessions to be eligible for end-semester examinations."
+  },
+  {
+    "id": 2,
+    "category": "Academics",
+    "question": "How are SGPA and CGPA calculated at FTE CHARUSAT?",
+    "answer": "SGPA (Semester Grade Point Average) is calculated as the sum of (Course Credit × Grade Point) divided by total credits registered in that semester. CGPA reflects the cumulative grade performance across all completed semesters."
+  },
+  {
+    "id": 3,
+    "category": "Academics",
+    "question": "Where can I view my continuous internal evaluation (CIE) marks?",
+    "answer": "Continuous Internal Evaluation marks, including quizzes, mid-semester exams, and lab practical evaluation records, are published on the StudentHub Dashboard and university ERP portal."
+  },
+  {
+    "id": 4,
+    "category": "Events",
+    "question": "How do I register for campus technical workshops and hackathons?",
+    "answer": "Navigate to the 'Events' page on StudentHub, select your desired event, click 'Register Now', verify your student details, and submit. You will receive an instant e-confirmation pass."
+  },
+  {
+    "id": 5,
+    "category": "Events",
+    "question": "Are participation e-certificates provided for all StudentHub events?",
+    "answer": "Yes, verified participants who attend the event and submit the exit feedback form receive an authorized digital e-certificate directly in their StudentHub Profile."
+  },
+  {
+    "id": 6,
+    "category": "Events",
+    "question": "Can non-computer engineering students register for coding hackathons?",
+    "answer": "Absolutely! Interdisciplinary teams comprising students from CE, IT, AIML, EC, Mechanical, and Civil are highly encouraged to participate in all campus hackathons."
+  },
+  {
+    "id": 7,
+    "category": "Accounts",
+    "question": "How can I reset my StudentHub portal password?",
+    "answer": "On the Login page, click on 'Forgot Password', enter your registered CHARUSAT student email ID, and follow the instructions to securely reset your credentials."
+  },
+  {
+    "id": 8,
+    "category": "Accounts",
+    "question": "What are the rules for creating a secure password?",
+    "answer": "Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one numeric digit, and one special character (@, $, !, %, *, ?, &)."
+  },
+  {
+    "id": 9,
+    "category": "Accounts",
+    "question": "What is the session timeout limit on the StudentHub portal?",
+    "answer": "For security reasons, your active session will automatically expire after 15 minutes of inactivity. You can use 'Remember Me' on trusted private devices."
+  },
+  {
+    "id": 10,
+    "category": "Library",
+    "question": "How many books can a B.Tech student borrow simultaneously?",
+    "answer": "Undergraduate B.Tech students are eligible to issue up to 4 books for a period of 14 days, renewable once through the Library Web Portal or circulation desk."
+  },
+  {
+    "id": 11,
+    "category": "Library",
+    "question": "How do I access IEEE Xplore, ScienceDirect, and digital e-journals off-campus?",
+    "answer": "Off-campus remote access to subscribed research databases is provided through CHARUSAT Shibboleth / OpenAthens single sign-on credentials."
+  },
+  {
+    "id": 12,
+    "category": "Placements",
+    "question": "What are the eligibility criteria for campus placement drives?",
+    "answer": "Students typically require a minimum CGPA of 6.5 or above with no active backlogs. Specific criteria vary per visiting tier-1 tech recruiters."
+  },
+  {
+    "id": 13,
+    "category": "Placements",
+    "question": "Does CHARUSAT offer support for competitive exams like GATE and GRE?",
+    "answer": "Yes, FTE runs specialized coaching cells, peer mentorship circles, and provides comprehensive library resources for GATE, CAT, GRE, and TOEFL preparations."
+  },
+  {
+    "id": 14,
+    "category": "General",
+    "question": "What are the timings of the Central Innovation Complex and tinkering labs?",
+    "answer": "The Innovation Lab and Central Tinkering Hub remain open from 8:00 AM to 9:00 PM on working days for sanctioned student projects and research teams."
+  },
+  {
+    "id": 15,
+    "category": "General",
+    "question": "How can students submit official feedback or grievances?",
+    "answer": "Students can submit constructive feedback or lodge queries using the 'Feedback' or 'Contact' forms on StudentHub, which route directly to the respective department coordinators."
+  },
+  {
+    "id": 16,
+    "category": "General",
+    "question": "Is high-speed Wi-Fi available across the entire CHARUSAT campus?",
+    "answer": "Yes, seamless gigabit campus Wi-Fi ('CHARUSAT-CAMPUS') is available throughout academic blocks, libraries, seminar complexes, and student residences."
+  }
+]
